@@ -1,0 +1,40 @@
+<div class="col-md-4">
+  <div class="card card-user">
+    <img src="assets/logo.png" alt="Circle Image" class="img-circle img-no-padding img-responsive px-1">
+
+    <div class="card-header">
+      <h1 class="card-title">Login - Cadastrar</h1>
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="row">
+           <div class="col-md-7 px-2">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input  [(ngModel)]="usuario.email" class="form-control" placeholder="Email">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7 px-2">
+            <div class="form-group">
+              <label>Senha</label>
+              <input [(ngModel)]="usuario.senha" class="form-control" placeholder="senha" value="">
+            </div>
+          </div>
+          <div class="row">
+            <div class="update ml-auto mr-auto">
+              <button type="submit" class="btn btn-primary btn-round"(click)="fazerLogin()"[routerLink]="['/tela-controle']">Login</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="update ml-auto mr-auto">
+              <button type="submit" class="btn btn-primary btn-round"(click)="inserirUsuario()"[routerLink]="['/cadastro']">Cadastrar</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
