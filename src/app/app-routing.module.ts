@@ -6,7 +6,7 @@ import { CadastroUsuarioComponent } from './usuario/cadastro-usuario/cadastro-us
 
 const routes: Routes = [
   { path: 'login', component: LoginFormComponent},
-  { path: 'cadastro', component: CadastroUsuarioComponent },
+  { path: 'register', component: CadastroUsuarioComponent },
   { path: 'tela-controle', component: TelaControleComponent },
 ];
 

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/Model/usuario';
+import {UsuarioService} from "../../service/usuario.service";
 
 
 @Component({
