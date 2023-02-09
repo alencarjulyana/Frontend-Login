@@ -12,7 +12,7 @@ export class AuthService {
   constructor (private router: Router) {}
 
 fazerLogin(usuario: Usuario): void {
-    if (usuario.email === 'usuario@email.com' && usuario.senha === '123456') {
+    if (usuario.email === 'usuario@email.com' && usuario.password === '123456') {
       this.usuarioAutenticado = true ;
       this.router.navigate(['/tela-controle']);
 
@@ -22,7 +22,7 @@ fazerLogin(usuario: Usuario): void {
   }
 
   inserirUsuario(usuario: Usuario): void {
-    if (usuario.email === 'usuario@email.com' && usuario.senha === '123456') {
+    if (usuario.email === 'usuario@email.com' && usuario.password === '123456') {
       this.usuarioAutenticado = true ;
       this.router.navigate(['/tela-controle']);
 

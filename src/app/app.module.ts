@@ -1,3 +1,5 @@
+import { UsuarioModule } from './usuario/usuario.module';
+
 import { MatInputModule } from '@angular/material/input';
 
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
@@ -25,6 +27,7 @@ import { TelaControleComponent } from './tela-controle/tela-controle.component';
     HomeComponent,
     LoginFormComponent,
     TelaControleComponent,
+    
 
 
 
@@ -33,12 +36,12 @@ import { TelaControleComponent } from './tela-controle/tela-controle.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    routing,
     MatFormFieldModule,
     MatSelectModule,
     MatCardModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    UsuarioModule
 
 
 

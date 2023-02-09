@@ -1,0 +1,11 @@
+{
+  "usuario": [
+    {
+      "_id": 1,
+      "nome": "admin",
+      "email": "teste@gmail.com",
+      "senha": ""
+      
+    }
+  ]
+}

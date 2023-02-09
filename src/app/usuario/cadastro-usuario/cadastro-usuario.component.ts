@@ -21,7 +21,7 @@ export class CadastroUsuarioComponent implements OnInit {
 
   constructor(private AuthCadastroServiceService: AuthCadastroServiceService,  router: Router) {
     this.router = router;
-    this.usuario = new Usuario();
+    this.usuario = new Usuario('', {});
   }
 
   ngOnInit(): void {
