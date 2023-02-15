@@ -19,12 +19,17 @@ export class CadastroUsuarioComponent implements OnInit {
   usuario : Usuario;
   UsuarioService: any;
 
-  constructor(private AuthCadastroServiceService: AuthCadastroServiceService,  router: Router) {
+  constructor(private AuthCadastroServiceService: AuthCadastroServiceService,  router: Router, UsuarioService: UsuarioService) {
     this.router = router;
     this.usuario = new Usuario('', {});
+    this.UsuarioService = UsuarioService
   }
 
   ngOnInit(): void {
+  }
+
+  registrarUsuario(novoUsuario: Usuario){
+    this.UsuarioService.registrar(novoUsuario).subscribe()
   }
 
 

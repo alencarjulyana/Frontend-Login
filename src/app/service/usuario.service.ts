@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 })
 export class UsuarioService {
 
-  URL_USUARIOS = 'http://127.0.0.1:5000/users';
+  URL_USUARIOS = 'http://127.0.0.1:5000/register';
 
   constructor(private clienteHttp: HttpClient) { }
 
@@ -16,9 +16,9 @@ export class UsuarioService {
     return this.clienteHttp.get<Usuario[]>(this.URL_USUARIOS);
   }
 
-  inserir(novoUsuario: Usuario): Observable<Usuario> {
+  registrar(novoUsuario: Usuario): Observable<Usuario> {
     return this.clienteHttp.post<Usuario>(
-        `${this.URL_USUARIOS}/register`, novoUsuario);
+        `${this.URL_USUARIOS}`, novoUsuario);
   }
 
   apagar(idParaRemocao: string): Observable<object> {
