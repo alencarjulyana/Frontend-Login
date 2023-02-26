@@ -7,29 +7,29 @@
     </div>
     <div class="card-body">
       <form>
-        <div class="row">
+        <div class="row justify-content-center">
            <div class="col-md-7 px-2">
             <div class="form-group">
               <label for="exampleInputEmail1">Email</label>
-              <input  [(ngModel)]="usuario.email" class="form-control" placeholder="Email">
+              <input name="email" [(ngModel)]="usuario.email" class="form-control" placeholder="Email">
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
           <div class="col-md-7 px-2">
             <div class="form-group">
               <label>Senha</label>
-              <input [(ngModel)]="usuario.senha" class="form-control" placeholder="senha" value="">
+              <input name="password" [(ngModel)]="usuario.password" class="form-control" placeholder="senha" value="">
+            </div>
+          </div>
+          <div class="row ">
+            <div class="update ml-auto mr-auto">
+              <button type="submit" class="btn btn-primary btn-round"(click)="fazerLogin()">Login</button>
             </div>
           </div>
           <div class="row">
             <div class="update ml-auto mr-auto">
-              <button type="submit" class="btn btn-primary btn-round"(click)="fazerLogin()"[routerLink]="['/tela-controle']">Login</button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="update ml-auto mr-auto">
-              <button type="submit" class="btn btn-primary btn-round"(click)="inserirUsuario()"[routerLink]="['/cadastro']">Cadastrar</button>
+              <button type="submit" class="btn btn-primary btn-round"[routerLink]="['/register']">Cadastrar</button>
             </div>
           </div>
         </div>

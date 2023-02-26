@@ -14,7 +14,7 @@ export class AuthCadastroServiceService {
 
 
   inserirUsuario(usuario: Usuario): void {
-    if (usuario.email === 'usuario@email.com' && usuario.senha === '123456') {
+    if (usuario.email === 'usuario@email.com' && usuario.password === '123456') {
       this.usuarioAutenticado = true ;
       this.router.navigate(['/tela-controle']);
 
