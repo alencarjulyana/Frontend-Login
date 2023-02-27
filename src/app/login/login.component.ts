@@ -4,6 +4,8 @@ import { AuthService } from '../login/auth.service';
 import { Router } from '@angular/router';
 import { Usuario } from '../Model/usuario';
 import { UsuarioService } from "../service/usuario.service";
+import { IMensagem } from '../service/IMensagem';
+import { MensagemService } from '../service/mensagem.service';
 
 @Component({
   selector: 'app-login-form',
@@ -20,19 +22,26 @@ export class LoginFormComponent implements OnInit {
     email : new FormControl('', [Validators.required, Validators.email]),
     senha : new FormControl('', [Validators.required])
   }
+  UsuarioService: UsuarioService;
 
 
-  constructor(private AuthService: AuthService,  private router: Router){ }
+  constructor(private AuthService: AuthService,  private router: Router, UsuarioService: UsuarioService, private MensagemService: MensagemService){
+    this.usuario = new Usuario('', {});
+    this.UsuarioService = UsuarioService;
+    this.MensagemService = MensagemService;
+
+   }
 
 
   ngOnInit(): void {
   }
 
+  
   fazerLogin(){
     this.AuthService.fazerLogin(this.usuario);
+    this.MensagemService.logincomsucesso('Login autorizado')
 
   }
-
 
   formValid() {
     return this.login.email.valid && this.login.senha.valid;
@@ -47,8 +56,7 @@ export class LoginFormComponent implements OnInit {
       this.usuario = new Usuario();
     }
 
-
-
-
+    
+    
 
 }

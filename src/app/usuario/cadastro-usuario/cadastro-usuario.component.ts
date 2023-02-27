@@ -36,6 +36,7 @@ export class CadastroUsuarioComponent implements OnInit {
     this.MensagemService.usuariocadastrado('Usuario Cadastrado com Sucesso')
   }
 
+  
 
   inserirUsuario(): void{
     this.AuthCadastroServiceService.inserirUsuario(this.usuario);
